@@ -42,7 +42,7 @@
             label = "Home";
         };
 
-        raise_layer {
+        symbol_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -59,7 +59,7 @@
             label = "Symbols";
         };
 
-        lower_layer {
+        nav_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -67,10 +67,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp PAGE_UP  &kp PAGE_DOWN   &kp UP_ARROW    &kp N9     &trans  &trans
-&trans   &trans  &trans  &trans    &trans  &trans       &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
-&trans   &trans  &trans  &trans    &trans  &trans       &kp END      &kp HOME        &trans          &trans     &trans  &trans
-                         &kp LGUI  &trans  &kp SPACE    &kp RET      &trans          &kp RALT
+&kp TAB  &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp PAGE_UP    &kp HOME        &kp UP_ARROW    &kp END    &trans  &trans
+&trans   &trans  &trans  &trans    &trans  &trans       &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
+&trans   &trans  &trans  &trans    &trans  &trans       &trans         &trans          &trans          &trans     &trans  &trans
+                         &kp LGUI  &trans  &kp SPACE    &kp RET        &trans          &kp RALT
             >;
 
             label = "Nav";
