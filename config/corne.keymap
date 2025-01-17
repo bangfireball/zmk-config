@@ -72,13 +72,31 @@
 
         System {
             bindings = <
-&trans          &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &to 4           &trans  &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                             &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "system";
+        };
+
+        game_layer {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E   &kp R   &kp T        &kp Y      &kp U   &kp I      &kp O    &kp P     &kp O
+&trans     &kp A  &kp S  &kp D   &kp F   &kp F        &kp H      &kp J   &kp K      &kp L    &kp SEMI  &trans
+&kp LSHFT  &kp Z  &kp X  &kp C   &kp F   &kp V        &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &to 0
+                         &trans  &trans  &kp SPACE    &kp SPACE  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        system_layer_con {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
