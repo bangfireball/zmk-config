@@ -42,21 +42,15 @@
             label = "Home";
         };
 
-        symbol_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
+        symbol_opt {
             bindings = <
-&kp ESCAPE  &kp EXCL      &kp AT  &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET         &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LC(C)   &kp NUMBER_1  &kp N2  &kp N3      &kp N4    &kp N5       &kp LESS_THAN     &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp BACKSLASH
-&kp LC(V)   &kp N6        &kp N7  &kp N8      &kp N9    &kp N0       &kp GREATER_THAN  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp TILDE
-                                  &kp LSHIFT  &trans    &kp SPACE    &kp RET           &trans     &kp RALT
+&kp ESCAPE  &kp APOS   &kp LT     &kp GT    &kp DQT    &kp DOT     &kp LS(AMPS)  &trans      &kp LBKT  &kp RBKT  &kp PERCENT   &trans
+&kp LC(C)   &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH    &kp LS(PIPE)  &kp DOLLAR  &kp LPAR  &kp RPAR  &kp QUESTION  &trans
+&kp LC(V)   &kp CARET  &kp FSLH   &kp STAR  &kp BSLH   &kp BSLH    &kp TILDE     &kp COLON   &kp LBRC  &kp RBRC  &kp AT        &trans
+                                  &trans    &trans     &trans      &trans        &trans      &trans
             >;
 
-            label = "Symbols";
+            label = "Symbol Opt";
         };
 
         nav_layer {
@@ -97,13 +91,30 @@
 
             label = "Game";
         };
+
+        symbol_classic {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp ESCAPE  &kp EXCL      &kp AT  &kp HASH    &kp DLLR  &kp PRCNT    &kp CARET         &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LC(C)   &kp NUMBER_1  &kp N2  &kp N3      &kp N4    &kp N5       &kp LESS_THAN     &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp BACKSLASH
+&kp LC(V)   &kp N6        &kp N7  &kp N8      &kp N9    &kp N0       &kp GREATER_THAN  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT  &kp TILDE
+                                  &kp LSHIFT  &trans    &kp SPACE    &kp RET           &trans     &kp RALT
+            >;
+
+            label = "Symbols Classic";
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         system_layer_con {
-            if-layers = <1 2>;
+            if-layers = <2 1>;
             then-layer = <3>;
         };
     };
