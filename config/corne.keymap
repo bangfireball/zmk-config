@@ -60,10 +60,10 @@
 
         symbol_opt {
             bindings = <
-&kp ESCAPE   &kp GRAVE  &kp LT     &kp GT    &kp DQT    &kp DOT     &kp LS(AMPS)  &trans      &kp LBKT  &kp RBKT  &kp PERCENT   &trans
-&kp LC(C)    &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH    &kp LS(PIPE)  &kp DOLLAR  &kp LPAR  &kp RPAR  &kp QUESTION  &trans
-&kp LC(DEL)  &kp CARET  &kp UNDER  &kp STAR  &kp SLASH  &kp BSLH    &kp TILDE     &kp COLON   &kp LBRC  &kp RBRC  &kp AT        &trans
-                                   &trans    &trans     &trans      &trans        &trans      &trans
+&kp ESCAPE  &kp GRAVE  &kp LT     &kp GT    &kp DQT    &kp DOT     &kp LS(AMPS)  &trans      &kp LBKT  &kp RBKT  &kp PERCENT   &trans
+&kp LC(C)   &kp EXCL   &kp MINUS  &kp PLUS  &kp EQUAL  &kp HASH    &kp LS(PIPE)  &kp DOLLAR  &kp LPAR  &kp RPAR  &kp QUESTION  &trans
+&kp DEL     &kp CARET  &kp UNDER  &kp STAR  &kp SLASH  &kp BSLH    &kp TILDE     &kp COLON   &kp LBRC  &kp RBRC  &kp AT        &trans
+                                  &trans    &trans     &trans      &trans        &trans      &trans
             >;
 
             label = "Symbol Opt";
