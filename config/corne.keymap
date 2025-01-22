@@ -59,7 +59,7 @@
 &kp TAB    &kp Q           &kp W       &kp E        &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P     &kp BSPC
 &kp LCTRL  &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &kp SEMI  &kp ENTER
 &kp LSHFT  &kp Z           &kp X       &kp C        &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH  &kp APOS
-                                       &to 6        &td2         &kp SPACE    &td1   &kp SPACE    &kp DELETE
+                                       &mo 6        &td2         &kp SPACE    &td1   &kp SPACE    &kp DELETE
             >;
 
             label = "Home";
