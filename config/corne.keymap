@@ -56,10 +56,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q           &kp W       &kp E          &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P     &kp BSPC
-&kp LCTRL  &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D    &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &kp SEMI  &kp ENTER
-&kp LSHFT  &kp Z           &kp X       &kp C          &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH  &kp APOS
-                                       &kp BACKSPACE  &td2         &kp SPACE    &td1   &kp SPACE    &kp DELETE
+&kp TAB    &kp Q           &kp W       &kp E        &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P     &kp BSPC
+&kp LCTRL  &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z           &kp X       &kp C        &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH  &kp APOS
+                                       &to 6        &td2         &kp SPACE    &td1   &kp SPACE    &kp DELETE
             >;
 
             label = "Home";
@@ -95,9 +95,9 @@
 
         System {
             bindings = <
-&trans      &trans        &trans        &trans        &trans        &to 4           &trans  &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &to 4
                                         &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
@@ -130,6 +130,17 @@
             >;
 
             label = "Symbols Classic";
+        };
+
+        left_num {
+            bindings = <
+&trans  &kp STAR  &kp N7  &kp N8  &kp N9  &kp LS(PLUS)    &kp EQUAL  &trans  &trans  &trans  &trans  &trans
+&trans  &kp FSLH  &kp N4  &kp N5  &kp N6  &kp MINUS       &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &kp DOT   &kp N1  &kp N2  &kp N3  &kp N0          &trans     &trans  &trans  &trans  &trans  &trans
+                          &trans  &to 0   &trans          &trans     &trans  &trans
+            >;
+
+            label = "Left Num";
         };
     };
 
