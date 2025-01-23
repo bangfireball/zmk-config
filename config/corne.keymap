@@ -40,7 +40,7 @@
         compatible = "zmk,combos";
 
         combo_caps {
-            bindings = <&caps_word>;
+            bindings = <&kp CAPSLOCK>;
             key-positions = <16 19>;
         };
     };
