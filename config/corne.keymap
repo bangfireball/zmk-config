@@ -38,6 +38,15 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 2>, <&mo 5>;
         };
+
+        volume_btn: volume_btn {
+            compatible = "zmk,behavior-hold-tap";
+            label = "VOLUME_BTN";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -60,10 +69,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q           &kp W       &kp E        &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P     &kp BSPC
-&kp LCTRL  &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &kp SEMI  &kp ENTER
-&kp LSHFT  &kp Z           &kp X       &kp C        &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH  &kp APOS
-                                       &mo 5        &td2         &kp ENTER    &td1   &kp SPACE    &kp DELETE
+&kp BACKSPACE                          &kp Q           &kp W       &kp E        &kp R        &kp T        &kp Y  &kp U        &kp I        &kp O       &kp P     &kp BSPC
+&kp TAB                                &hm LEFT_GUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &kp G        &kp H  &hm RSHFT J  &hm RCTRL K  &hm RALT L  &kp SEMI  &kp ENTER
+&volume_btn C_VOLUME_DOWN C_VOLUME_UP  &kp Z           &kp X       &kp C        &kp V        &kp B        &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH  &kp APOS
+                                                                   &mo 5        &td2         &kp ENTER    &td1   &kp SPACE    &kp DELETE
             >;
 
             label = "Home";
